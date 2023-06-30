@@ -7,33 +7,72 @@ import random
 from words import word_options
 
 
-def valid_word():
+def select_word():
     word = random.choice(word_options)
     """
     converting all user input to uppercase to make  it easier for user to clearly read
     """
     return word.upper()
 
-def play(word):
+"""
+main area for whole game, random word chosen is covered by #
+if user guesses correct letter then it will be revealed and will uncover #
+user as a maximum of 6 attempts to get the answer
+"""
+def game(word):
 
     """
-    words completition is same length as chosen word
-    initially contain only underscores
+    same length as chosen word
+    word covered with only hashtags
     """
-    word_completion ="_" * len(word)
+    cover_word ="#" * len(word)
     """
-    guessed intiliaised to false
+    guessed starts with being false
     """
     guessed = False
     """
     holds letters and words that user guesses
     """
-    guessed_letters = []
-    guessed_words = []
+    user_input_letters = []
+    user_input_words = []
     """
-    number of tries, corrsponding number of bodyparts left to be drawn on the hangmn before the user loses
-    head, body, both arms and both legs
+    number of tries the user has to guess the right answer
     """
-    tries 6
+    chances = 6
+
+def draw_hangman(chances):
+    
+    each_try = [
+        +---+
+        O   |
+            |
+            |
+       ===''', '''
+        +---+
+        O   |
+        |   |
+            |
+       ===''', '''
+        +---+
+        O   |
+       /|   |
+            |
+       ===''', '''
+        +---+
+        O   |
+       /|\ |
+        |
+       ===''', '''
+        +---+
+        O   |
+       /|\  |
+       /    |
+       ===''', '''
+        +---+
+        O   |
+       /|\  |
+       / \  |
+        ==='''
+    ]
 
 
