@@ -8,7 +8,7 @@ from words import word_options
 
 
 def select_word():
-    word = random.choice(word_options)
+    chosen_word = random.choice(word_options)
     """
     converting all user input to uppercase to make  it easier for user to clearly read
     """
@@ -19,13 +19,13 @@ main area for whole game, random word chosen is covered by #
 if user guesses correct letter then it will be revealed and will uncover #
 user as a maximum of 6 attempts to get the answer
 """
-def game(word):
+def game(chosen_word):
 
     """
     same length as chosen word
     word covered with only hashtags
     """
-    cover_word ="#" * len(word)
+    cover_word ="#" * len(chosen_word)
     """
     guessed starts with being false
     """
@@ -68,73 +68,74 @@ def game(word):
         """
         if len(user_guess) == 1 and user_guess.valid_character():
             if user_guess in user_guess_letters:
-                print("Unfortunately, you've already guessed this letter", user_guess)
+                print("You've already guessed this letter", user_guess)
 
                 """
                 user guesses letter not in the word and their number of tries goes down by 1
                 """
-                elif user_guess in user_guess_letters:
-                    print(user_guess, "is not in the word!")
-                    chances -= 1
-                    user_guess_letters.append(user_guess)
+            elif user_guess not in chosen_word:
+                print(user_guess, "is not in the word!")
+                chances -= 1
+                user_guess_letters.append(user_guess)
 
                 
-                else:
-                    print("Well done," user_guess_letters, "is in the word!")
-                    user_guess_letters.append(guess)
-                    """
-                    cover_word from a string to a list so we can index into it, 
-                    storing this into word_as_list
-                    """
-                    word_as_list = list(cover_word)
-                    indices = [i for i, letter in enumerate(word) if letter == guess]
-                    for index in indices:
-                        word_as_list[index] = guescover_word = "".join(word_as_list)
-                        if "_" not in cover_word: 
-                            guessed = True
+            else:
+                print("Well done,", user_guess_letters, "is in the word!")
+                user_guess_letters.append(user_guess)
+                """
+                cover_word from a string to a list so we can index into it, 
+                storing this into word_as_list
+                """
+                word_as_list = list(cover_word)
+                indices = [i for i, letter in enumerate(chosen_word) if letter == user_guess]
+                for index in indices:
+                    word_as_list[index] = user_guess
+                cover_word = "".join(word_as_list)
+                if "#" not in cover_word: 
+                    guessed = True
 
 
         """
         length of guess = length of actual word and contains only letters
         """
-        elif len(user_guess) == len(word)and user_guess.valid_character():
-            if guess in user_guess_words:
-                print("You've already guessed the word!", guess)
-            elif guess != word:
-                print(guess, "is not the word!")
+        if len(user_guess) == len(chosen_word) and user_guess.valid_character():
+            if user_guess in user_guess_words:
+                print("You've already guessed the word!", user_guess)
+            elif user_guess != chosen_word:
+                print(user_guess, "is not the word!")
                 chances -= 1
-                user_guess_words.append(guess)
+                user_guess_words.append(user_guess)
             else:
                 guessed = True
-                cover_word = word
+                cover_word = chosen_word
         
-        """
-        else - anything else other than the above
-        """
+        
         else:
-        print("Not a valid guess!")
-  
-    """
-    print current state of hangman and the word
-    """
-    print(display_hangman(tries))
-    print(cover_word)
-    """"
-    print new line that spaces out each term
-    """"
-    print("\n")
+            print("Not a valid guess!")
+        print(display_hangman(chances))
+        print(cover_word)
+        print("\n")
 
-if guessed:
-    print("Congratulations! You've guessed the word!")
-else:
-    print("Oh no! You didn't guess the word :(")
+    if guessed:
+        print("Congratulations! You've guessed the word!")
+    else:
+        print("Oh no! You didn't guess the word :(. The word was" + chosen_word + ". Maybe next time!")
 
 
 
 def draw_hangman(chances):
     
     each_try = [
+        # orignal state, empty
+        """
+        +---+
+            |
+            |
+            |
+        ===    
+        """,
         
+        # head
         """
         +---+
         O   |
@@ -143,6 +144,7 @@ def draw_hangman(chances):
        ===''', '''
         """,
 
+        # head, body
         """
         +---+
         O   |
@@ -151,6 +153,7 @@ def draw_hangman(chances):
        ===''', '''
         """,
 
+        #head, body, left arm
         """
         +---+
         O   |
@@ -159,14 +162,17 @@ def draw_hangman(chances):
        ===''', '''
         """,
 
+        #head, body, left arm, right arm
         """
         +---+
         O   |
-       /|\ |
-        |
+       /|\  |
+            |
        ===''', '''
         """,
 
+
+        #head, body, left arm, right arm, left leg
         """
         +---+
         O   |
@@ -175,6 +181,7 @@ def draw_hangman(chances):
        ===''', '''
         """,
 
+        #head, body, left arm, right arm, left leg, right leg
         """
         +---+
         O   |
@@ -183,17 +190,18 @@ def draw_hangman(chances):
         ==='''
         """
     ]
+    return each_try[chances]
 
 
 """
 taking user back to the starting area of the game
 """
 def main():
-    word = select_word_word()
-    play(word)
+    chosen_word = select_word()
+    game(chosen_word)
     while input("Would you like to play again? (Y/N)"). upper() == "Y":
-        word = select_word()
-        play(word)
+        chosen_word = select_word()
+        game(chosen_word)
 
     if __name__ == "__main__":
         main()
