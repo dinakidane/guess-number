@@ -82,13 +82,31 @@ def game(word):
                 else:
                     print("Well done," user_guess_letters, "is in the word!")
                     user_guess_letters.append(guess)
+                    """
+                    cover_word from a string to a list so we can index into it, 
+                    storing this into word_as_list
+                    """
                     word_as_list = list(cover_word)
+                    indices = [i for i, letter in enumerate(word) if letter == guess]
+                    for index in indices:
+                        word_as_list[index] = guescover_word = "".join(word_as_list)
+                        if "_" not in cover_word: 
+                            guessed = True
 
 
         """
         length of guess = length of actual word and contains only letters
         """
         elif len(user_guess) == len(word)and user_guess.valid_character():
+            if guess in user_guess_words:
+                print("You've already guessed the word!", guess)
+            elif guess != word:
+                print(guess, "is not the word!")
+                chances -= 1
+                user_guess_words.append(guess)
+            else:
+                guessed = True
+                cover_word = word
         
         """
         else - anything else other than the above
@@ -106,10 +124,10 @@ def game(word):
     """"
     print("\n")
 
-
-
-
-
+if guessed:
+    print("Congratulations! You've guessed the word!")
+else:
+    print("Oh no! You didn't guess the word :(")
 
 
 
@@ -167,3 +185,15 @@ def draw_hangman(chances):
     ]
 
 
+"""
+taking user back to the starting area of the game
+"""
+def main():
+    word = select_word_word()
+    play(word)
+    while input("Would you like to play again? (Y/N)"). upper() == "Y":
+        word = select_word()
+        play(word)
+
+    if __name__ == "__main__":
+        main()
