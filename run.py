@@ -4,6 +4,7 @@ get random words from the word options variable in the words file
 """
 
 import random
+import string
 from words import word_options
 
 
@@ -43,6 +44,7 @@ def game(chosen_word):
     """
     help guide user when they start
     """
+    print("Welcome to Hangman!")
     print("Let's start the game!")
     """
     intital state of hangman
