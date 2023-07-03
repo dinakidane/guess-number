@@ -13,7 +13,7 @@ def select_word():
     """
     converting all user input to uppercase to make  it easier for user to clearly read
     """
-    return word.upper()
+    return chosen_word.upper()
 
 """
 main area for whole game, random word chosen is covered by #
@@ -205,5 +205,5 @@ def main():
         chosen_word = select_word()
         game(chosen_word)
 
-    if __name__ == "__main__":
-        main()
+if __name__ == "__main__":
+    main()
