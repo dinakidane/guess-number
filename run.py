@@ -100,7 +100,7 @@ def game(chosen_word):
         """
         length of guess = length of actual word and contains only letters
         """
-        if len(user_guess) == len(chosen_word) and user_guess.valid_character():
+        if len(user_guess) == len(chosen_word) and user_guess.isalpha():
             if user_guess in user_guess_words:
                 print("You've already guessed the word!", user_guess)
             elif user_guess != chosen_word:
