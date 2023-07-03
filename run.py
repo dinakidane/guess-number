@@ -68,7 +68,7 @@ def game(chosen_word):
         """
         guess has a length of one and contains only valid alphabet characters
         """
-        if len(user_guess) == 1 and user_guess.valid_character():
+        if len(user_guess) == 1 and user_guess.isalpha():
             if user_guess in user_guess_letters:
                 print("You've already guessed this letter", user_guess)
 
