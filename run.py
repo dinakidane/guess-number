@@ -129,68 +129,68 @@ def hangman(chances):
     
     each_try = [
 
-        #head, body, left arm, right arm, left leg, right leg
-        """
-        +---+
-        O   |
-       /|\  |
-       / \  |
-        ==='''
-        """    
+            #head, body, left arm, right arm, left leg, right leg
+            """
+            +---+
+            O   |
+           /|\  |
+           / \  |
+            
+            """,    
 
-        #head, body, left arm, right arm, left leg
-        """
-        +---+
-        O   |
-       /|\  |
-       /    |
-       ===''', '''
-        """,
+            #head, body, left arm, right arm, left leg
+            """
+            +---+
+            O   |
+           /|\  |
+           /    |
+            
+            """,
 
-        #head, body, left arm, right arm
-        """
-        +---+
-        O   |
-       /|\  |
-            |
-       ===''', '''
-        """,
+            #head, body, left arm, right arm
+            """
+            +---+
+            O   |
+           /|\  |
+                |
+        
+            """,
 
-        #head, body, left arm
-        """
-        +---+
-        O   |
-       /|   |
-            |
-       ===''', '''
-        """,
+            #head, body, left arm
+            """
+            +---+
+            O   |
+           /|   |
+                |
+            
+            """,
 
-         # head, body
-        """
-        +---+
-        O   |
-        |   |
-            |
-       ===''', '''
-        """,
+            # head, body
+            """
+            +---+
+            O   |
+            |   |
+                |
 
-        # head
-        """
-        +---+
-        O   |
-            |
-            |
-       ===''', '''
-        """,
+            """,
 
-        # orignal state, empty
-        """
-        +---+
-            |
-            |
-            |
-        ===    
-        """
+            # head
+            """
+            +---+
+            O   |
+                |
+                |
+            
+            """,
+            
+            # orignal state, empty
+            """
+            +---+
+                |
+                |
+                |
+               
+            """
     ]
     return each_try[chances]
 
