@@ -49,7 +49,7 @@ def game(chosen_word):
     """
     intital state of hangman
     """
-    print(draw_hangman(chances))
+    print(hangman(chances))
     """
     initial state of word with all hashtag
     """
@@ -114,43 +114,44 @@ def game(chosen_word):
         
         else:
             print("Not a valid guess!")
-        print(draw_hangman(chances))
+        print(hangman(chances))
         print(cover_word)
         print("\n")
 
     if guessed:
         print("Congratulations! You've guessed the word!")
     else:
-        print("Oh no! You didn't guess the word :(. The word was" + chosen_word + ". Maybe next time!")
+        print("Oh no! You didn't guess the word :(. The word was " + chosen_word + ". Maybe next time!")
 
 
 
-def draw_hangman(chances):
+def hangman(chances):
     
     each_try = [
-        # orignal state, empty
-        """
-        +---+
-            |
-            |
-            |
-        ===    
-        """,
-        
-        # head
+
+        #head, body, left arm, right arm, left leg, right leg
         """
         +---+
         O   |
-            |
-            |
+       /|\  |
+       / \  |
+        ==='''
+        """    
+
+        #head, body, left arm, right arm, left leg
+        """
+        +---+
+        O   |
+       /|\  |
+       /    |
        ===''', '''
         """,
 
-        # head, body
+        #head, body, left arm, right arm
         """
         +---+
         O   |
-        |   |
+       /|\  |
             |
        ===''', '''
         """,
@@ -164,32 +165,31 @@ def draw_hangman(chances):
        ===''', '''
         """,
 
-        #head, body, left arm, right arm
+         # head, body
         """
         +---+
         O   |
-       /|\  |
+        |   |
             |
        ===''', '''
         """,
 
-
-        #head, body, left arm, right arm, left leg
+        # head
         """
         +---+
         O   |
-       /|\  |
-       /    |
+            |
+            |
        ===''', '''
         """,
 
-        #head, body, left arm, right arm, left leg, right leg
+        # orignal state, empty
         """
         +---+
-        O   |
-       /|\  |
-       / \  |
-        ==='''
+            |
+            |
+            |
+        ===    
         """
     ]
     return each_try[chances]
