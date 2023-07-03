@@ -114,7 +114,7 @@ def game(chosen_word):
         
         else:
             print("Not a valid guess!")
-        print(display_hangman(chances))
+        print(draw_hangman(chances))
         print(cover_word)
         print("\n")
 
