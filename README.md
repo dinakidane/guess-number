@@ -43,7 +43,11 @@ this from happening.
 
     ![Congratulations](./images/right.png)
 
-    - To avoid them ch
+    - The user will also have the letters that they have chosen on display
+    - This prevents them from typing the same letter again and again
+    - This is also followed by the number of attempts they have left so the user is aware
+
+    ![Attempts](./images/attempt.png)
 
 ### Features left to implement
 
