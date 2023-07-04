@@ -82,7 +82,7 @@ def game(chosen_word):
 
                 
             else:
-                print("Well done,", user_guess_letters, "is in the word!")
+                print("Well done,", user_guess, "is in the word!")
                 user_guess_letters.append(user_guess)
                 """
                 cover_word from a string to a list so we can index into it, 
@@ -112,8 +112,6 @@ def game(chosen_word):
                 cover_word = chosen_word
         
         
-        else:
-            print("Not a valid guess!")
         print(hangman(chances))
         print(cover_word)
         print("\n")
