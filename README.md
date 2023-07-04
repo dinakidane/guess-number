@@ -41,8 +41,9 @@ this from happening.
     - The user will be congratulated if they end up guessing the word
     - They will also be asked if they want to play again
 
-    [Congratulations](./images/right.png)
+    ![Congratulations](./images/right.png)
 
+    - To avoid them ch
 
 ### Features left to implement
 
