@@ -29,6 +29,20 @@ this from happening.
 
     ![Start game](./images/start-game.png)
 
+    - The user will get a specific response letting them know if the letter the chose is not in the selected word
+    - This will also be followed by the hangman being draw
+    
+    ![Wrong answer](./images/wrong.png)
+
+    - The user will also get a response if the letter they input was in the word they're looking for
+
+    ![Right letter](./images/reply-game.png)
+
+    - The user will be congratulated if they end up guessing the word
+    - They will also be asked if they want to play again
+
+    [Congratulations](./images/right.png)
+
 
 ### Features left to implement
 
