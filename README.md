@@ -68,7 +68,7 @@
 
 ### Validators
 
-- Pycodestyle](https://pypi.org/project/pycodestyle/) was installed in the terminal to allow detections for errors and problems 
+- [Pycodestyle](https://pypi.org/project/pycodestyle/) was installed in the terminal to allow detections for errors and problems 
 - ![Test](./images/test.png)
 
 - The python code syntax was also tested continously throughout this website to ensure there would be no syntax issue affecting the code. [Python syntax checker](https://extendsclass.com/python-tester.html)
