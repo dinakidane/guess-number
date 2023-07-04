@@ -19,7 +19,7 @@ this from happening.
     - This is then followed by a small section to instruct the user how to play. 
     - They are then met with a message that prompts them to start playing the game. 
 
-    ![Game intro](./images/game-intro.png)
+     - ![Game intro](./images/game-intro.png)
 
 - Main game area
 
@@ -27,33 +27,42 @@ this from happening.
     - The empty drawing of the where the hangman would be suggests the intial state of the hangman 
     because the user hasn't inserted a wrong letter just yet
 
-    ![Start game](./images/start-game.png)
+     - ![Start game](./images/start-game.png)
 
     - The user will get a specific response letting them know if the letter the chose is not in the selected word
     - This will also be followed by the hangman being drawn
     - If the letter that the user has typed in isn't part of the alphabet, there will be no response
     - This will indicate that the user has typed an invalid character. It won't take away the number of attempts
     
-    ![Wrong answer](./images/wrong.png)
+     - ![Wrong answer](./images/wrong.png)
 
     - The user will also get a response if the letter they input was in the word they're looking for
 
-    ![Right letter](./images/reply-game.png)
+     - ![Right letter](./images/reply-game.png)
 
     - The user will be congratulated if they end up guessing the word
     - They will also be asked if they want to play again
 
-    ![Congratulations](./images/right.png)
+     - ![Congratulations](./images/right.png)
 
     - The user will also have the letters that they have chosen on display
     - This prevents them from typing the same letter again and again
     - This is also followed by the number of attempts they have left so the user is aware
 
-    ![Attempts](./images/attempt.png)
+     - ![Attempts](./images/attempt.png)
 
 ### Features left to implement
 
+- A feature to allow the user to type in a username
+- This may have personalised the experience of the game to the user
+
 ## Testing
+
+- [Pycodestyle](https://pypi.org/project/pycodestyle/) was installed in the terminal to allow detections for errors and problems 
+- ![Test](./images/test.png)
+
+- The python code syntax was also tested continously throughout this website to ensure there would be no syntax issue affecting the code. [Python syntax checker](https://extendsclass.com/python-tester.html)
+
 
 ## Deployment
 
