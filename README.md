@@ -78,7 +78,10 @@ this from happening.
 - [Responsiveness](https://www.websiteplanet.com/webtools/responsive-checker/#body): Used to check the screen responsiveness in many different types of screens.
 
 ## Deployment
-- [Heroku][https://dashboard.heroku.com/apps] was used to deploy the app and it was connected to the github repository.
+
+### Heroku Deployment
+
+- [Heroku](https://dashboard.heroku.com/apps) was used to deploy the app and it was connected to the github repository.
 - To deploy on Heroku:
     - Go on settings
     - Click reveal ConFig and insert PORT as the key and 8000 as the value
@@ -87,6 +90,15 @@ this from happening.
     - Connect it to you github
     - Make sure it is to the main branch 
     - click deploy
+
+### Cloning
+
+- Go to the repository in github
+- Click "code" in the right-hand corner of the page
+- Click "copy" to copy the code that shows on the HTTPS section
+- Open a GitBash terminal 
+- Navigate to the directory you want to paste the clone link in  
+- The process of cloning the repository is initiated by typing "git clone" in the terminal and pasting the command there. 
 
 ## Bugs
 
@@ -98,3 +110,6 @@ this from happening.
 - [Youtube](https://www.youtube.com/) allowed some help so to sort the code out properly
 - [W3Schools](https://www.w3schools.com/) presented information on which code would be more suitable for the game
 
+## Acknowledgements
+
+- A big thank you to everyone on slack and tutor support! Another big thank you to my mentor, Elaine. 
