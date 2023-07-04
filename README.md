@@ -1,9 +1,9 @@
 # Hangman
 
-Hangman is a straightforward game that requires a player to guess a specific word that has been randomly selected. 
- The players need to guess letters from the alphabet and have 6 attempts to try and get it right.
-Each answer they get wrong leads to the process of the stickman getting hanged and the aim is to stop
-this from happening.
+- Hangman is a straightforward game that requires a player to guess a specific word that has been randomly selected. 
+- The players need to guess letters from the alphabet and have 6 attempts to try and get it right.
+- The users are 
+- Each answer they get wrong leads to the process of the stickman getting hanged and the aim is to stop this from happening.
 
 [My Project](https://hangman-pyth-eee58bb863df.herokuapp.com/)
 
@@ -56,6 +56,14 @@ this from happening.
 - A feature to allow the user to type in a username
 - This may have personalised the experience of the game to the user
 
+## User experience
+
+- A variety of users are able to play this game. 
+- New users are able to read the instructions straight away, allowing them to enjoy the game as soon as possible
+- Users will enjoy the fact that they have a limited number of attempts as it makes it more challenging for them
+- The list of words that may be chosen are a variety of easy and challenging words, making it unpredictable for the user
+- The option to play again after finishing all 6 attempts makes it easier for the user to go back to the beginning, saving them the effort from refreshing their browser.
+
 ## Testing
 
 ### Validators
@@ -76,6 +84,10 @@ this from happening.
 - [Git](https://git-scm.com/): commited and pushed code to github.
 - [Github](https://github.com/): where all the pushed code was stored.
 - [Responsiveness](https://www.websiteplanet.com/webtools/responsive-checker/#body): Used to check the screen responsiveness in many different types of screens.
+
+## Media
+
+- No media has been inserted due to it not being necessary for the effectiveness of the game
 
 ## Deployment
 
