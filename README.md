@@ -58,16 +58,43 @@ this from happening.
 
 ## Testing
 
-- [Pycodestyle](https://pypi.org/project/pycodestyle/) was installed in the terminal to allow detections for errors and problems 
+### Validators
+
+- Pycodestyle](https://pypi.org/project/pycodestyle/) was installed in the terminal to allow detections for errors and problems 
 - ![Test](./images/test.png)
 
 - The python code syntax was also tested continously throughout this website to ensure there would be no syntax issue affecting the code. [Python syntax checker](https://extendsclass.com/python-tester.html)
 
+### Feature Testing
+
+- ![Feature test](./images/feature-test.png)
+
+## Technologies used
+
+### Frameworks, Libraries & Programs Used   
+
+- [Git](https://git-scm.com/): commited and pushed code to github.
+- [Github](https://github.com/): where all the pushed code was stored.
+- [Responsiveness](https://www.websiteplanet.com/webtools/responsive-checker/#body): Used to check the screen responsiveness in many different types of screens.
 
 ## Deployment
+- [Heroku][https://dashboard.heroku.com/apps] was used to deploy the app and it was connected to the github repository.
+- To deploy on Heroku:
+    - Go on settings
+    - Click reveal ConFig and insert PORT as the key and 8000 as the value
+    - Add Python and node.js as buildpacks
+    - Go on Deploy
+    - Connect it to you github
+    - Make sure it is to the main branch 
+    - click deploy
 
 ## Bugs
 
+- No known bugs
+
 ## Credits
 
-## Acknowledgements
+- [This website](https://hangmanwordgame.com/?fca=1&success=0#/) was used to ensure understanding of how the game is meant to be played.
+- [Youtube](https://www.youtube.com/) allowed some help so to sort the code out properly
+- [W3Schools](https://www.w3schools.com/) presented information on which code would be more suitable for the game
+
