@@ -45,7 +45,12 @@ def game(chosen_word):
     help guide user when they start
     """
     print("Welcome to Hangman!")
+    print("How to play:")
+    print("Insert a letter to try guess the word")
+    print("Every wrong answer you input, the closer the stickman gets to being hanged")
+    print("You have 6 attemps, good luck!")
     print("Let's start the game!")
+    
     """
     intital state of hangman
     """
