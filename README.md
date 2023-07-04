@@ -9,3 +9,30 @@ this from happening.
 
 ![Responsive Image](./images/responsiveness.png)
 
+## Features
+
+### Intro to the game
+
+- The user is welcomed into the game. 
+- This is then followed by a small section to instruct the user how to play. 
+- They are then met with a message that prompts them to start playing the game. 
+
+![Game intro](./images/game-intro.png)
+
+
+
+
+### Existing features
+
+
+### Features left to implement
+
+## Testing
+
+## Deployment
+
+## Bugs
+
+## Credits
+
+## Acknowledgements
