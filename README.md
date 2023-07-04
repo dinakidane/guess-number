@@ -30,7 +30,9 @@ this from happening.
     ![Start game](./images/start-game.png)
 
     - The user will get a specific response letting them know if the letter the chose is not in the selected word
-    - This will also be followed by the hangman being draw
+    - This will also be followed by the hangman being drawn
+    - If the letter that the user has typed in isn't part of the alphabet, there will be no response
+    - This will indicate that the user has typed an invalid character. It won't take away the number of attempts
     
     ![Wrong answer](./images/wrong.png)
 
