@@ -69,7 +69,7 @@ def game(chosen_word):
         whether its guessing a letter, word or typing something other than a letter or word of the correct length
         """
         user_guess = input("Type in a letter or a word...let's see if you get it right!: ").upper()
-        print("You have", chances, "attempts left. You have used these "
+        print("Be careful! You only have", chances, " tries left. So far, you have chosen these "
             "letters: ", " ".join(user_guess_letters))
         """
         guess has a length of one and contains only valid alphabet characters
